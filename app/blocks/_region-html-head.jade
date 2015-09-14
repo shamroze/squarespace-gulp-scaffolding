@@ -1,0 +1,29 @@
+- var time = new Date().getTime()
+
+doctype html
+<html lang="">
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title=(page_title || "HLG | High Lantern Group")
+    meta(name='description', content='A front-end template that helps you build fast, modern mobile web apps.')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src="//use.typekit.net/vnw2kmk.js")
+    script.
+        try {
+            Typekit.load({async: false});
+        } catch (e) {
+        }
+    link(rel="stylesheet" type="text/css" href="//cloud.typography.com/6480174/631848/css/fonts.css")
+    link(rel="stylesheet", type="text/css", href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css")
+    link(rel="stylesheet", type="text/css", href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css")
+    // Page styles
+    link(rel='stylesheet', href='/assets/styles/main.css?v=#{time}')
+    link(rel='stylesheet', href='/assets/styles/components.css?v=#{time}')
+    script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js")
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='/scripts/masonry.pkgd.min.js')
+if body_class
+    body(class=(body_class || "default"))
+else
+    <body class="{collection.urlId}">
